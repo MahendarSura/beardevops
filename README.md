@@ -90,9 +90,14 @@ We’re committed to simplifying complex DevOps challenges and enhancing persona
 
 We welcome contributions to BeardEvOps! Please follow [CONTRIBUTING guidelines](./CONTRIBUTING.md) for a smooth and collaborative process.
 
-<h2>Code Of Conduct📑</h2>
+<h2>🌐 About the BeardEvOps Community</h2>
 
-This project and all participants are governed by the [Code of Conduct](./CODE_OF_CONDUCT.md). Please uphold this code by participating respectfully.
+At **BeardEvOps**, we believe that DevOps isn't just about automation and pipelines — it's about people, growth, and continuous improvement. Our community is built to support aspiring professionals and seasoned engineers alike with mentorship, open collaboration, and innovative learning experiences.
+
+Whether you're contributing code, sharing ideas, or seeking advice, you're part of a mission-driven space that values respect, knowledge sharing, and personal development.
+
+Join us on this journey to simplify infrastructure and empower careers — one DevOps professional at a time.
+
 
 ## License 🔖
 

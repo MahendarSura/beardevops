@@ -1,0 +1,105 @@
+BeardevOps Community Guidelines
+Our Commitment
+At BeardevOps, we are committed to fostering a welcoming, inclusive, respectful, and harassment-free environment for everyone — regardless of age, body size, visible or invisible disability, ethnicity, gender identity and expression, experience level, education, socio-economic background, nationality, personal appearance, race, religion, or sexual orientation.
+
+We believe in collaboration, mutual respect, and building a thriving technical community where everyone feels safe, valued, and empowered to grow.
+
+Our Standards
+Positive behaviors include:
+
+Showing empathy, kindness, and professionalism
+
+Respecting differing opinions, experiences, and backgrounds
+
+Giving and receiving constructive feedback graciously
+
+Taking responsibility for mistakes and learning from them
+
+Prioritizing the community’s health and inclusivity over personal gain
+
+Unacceptable behaviors include:
+
+Use of sexualized language or imagery; unwanted sexual attention
+
+Trolling, insulting, or derogatory comments; personal or political attacks
+
+Public or private harassment or threats
+
+Sharing personal information without explicit consent
+
+Sustained disruptive or unsafe conduct
+
+Scope
+These guidelines apply to all BeardevOps spaces, including:
+
+GitHub repositories and code contributions
+
+Community forums, Discord, and chat groups
+
+Official social media channels
+
+Virtual or in-person events
+
+Any situation where someone is representing BeardevOps publicly
+
+Reporting Concerns
+If you experience or witness unacceptable behavior, please report it confidentially to:
+📧 conduct@beardevops.dev
+
+All reports will be handled promptly, respectfully, and with strict privacy.
+
+Enforcement & Consequences
+1. Correction
+
+Impact: Minor, unintentional missteps
+
+Action: Private reminder and clarification of expectations
+
+2. Warning
+
+Impact: Serious single offense or repeated minor infractions
+
+Action: Formal warning and possible temporary restrictions
+
+3. Temporary Ban
+
+Impact: Continued inappropriate behavior
+
+Action: Suspension from all BeardevOps platforms for a set period
+
+4. Permanent Ban
+
+Impact: Severe or repeated misconduct; safety threats
+
+Action: Permanent removal from the BeardevOps community
+
+Acknowledgment
+These guidelines are inspired by the Contributor Covenant and best practices from leading open-source and tech communities.
+
+Together, we make BeardevOps a place where innovation, professionalism, and community thrive.
+
+If you want, I can also make this website-friendly with a mustard yellow header, royal blue text accents, and clean section spacing so it perfectly matches your BeardevOps homepage style. That way, it’ll look native to your site and not like a pasted legal doc.
+
+
+
+
+
+
+
+
+You said:
+is it lokks professionalyy ?
+
+
+ChatGPT said:
+Yes — the version I gave you reads professionally and is aligned with how serious tech companies, SaaS platforms, and open-source foundations publish their guidelines.
+
+It’s:
+
+Concise & clear → avoids long, repetitive paragraphs.
+
+Structured → has clean sections: Commitment, Standards, Scope, Reporting, Enforcement, Acknowledgment.
+
+Neutral & respectful tone → no casual slang, no overly legal jargon.
+
+Aligned with global best practices → based on Contributor Covenant but customized for BeardevOps.

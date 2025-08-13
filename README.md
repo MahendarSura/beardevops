@@ -1,7 +1,8 @@
 # BeardEvOps 🧔‍♂️🚀  
 ## **Empowering DevOps Careers, Simplifying Infrastructure**
 
-![beardevops cover](https://your-image-link-here)  
+![beardevops cover]<img width="1536" height="1024" alt="beardevops-coverphoto" src="https://github.com/user-attachments/assets/d68d369f-e826-414d-b00d-3e84f3b86b83" />
+  
 
 <hr/>
 

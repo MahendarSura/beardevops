@@ -48,4 +48,4 @@ Here, you’ll find:
 ---
 
 🚀 **Stay tuned for updates and new content!**  
-> Powered by [beardevops.vercel.app](https://beardevops.com)
+> Powered by (https://beardevops.com)

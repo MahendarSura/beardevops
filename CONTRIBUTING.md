@@ -129,21 +129,6 @@ Together, we’ll build tools, share knowledge, and grow a thriving DevOps commu
 Happy Contributing! 🚀
 – The BeardevOps Team
 
-pgsql
-Copy
-Edit
-
----
-
-This is **single-page, GitHub-friendly markdown** — you can paste it directly into `CONTRIBUTING.md` and all headings, points, and code blocks will display perfectly without merging into a single paragraph.  
-
-Do you want me to also make a **matching "BeardevOps Community Guidelines"** file in the same style so both look consistent in your repo?
 
 
 
-
-
-
-
-
-Ask ChatGPT

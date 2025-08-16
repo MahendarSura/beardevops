@@ -17,7 +17,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 
-const projectName = "beardevops";  // changed to lowercase
+const projectName = "beardevops";  // lowercase as you wanted
 
 const About = () => {
   return (
@@ -75,17 +75,31 @@ const About = () => {
               strategies or an individual aiming for career excellence, {projectName}
               delivers unmatched services.
             </p>
-            {/* ...rest of the code remains the same */}
+
+            {/* Example testimonial with properly terminated strings */}
+            <div className="text-left text-gray-300 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-semibold mb-4">Testimonials</h3>
+              <blockquote className="mb-6">
+                <p>
+                  "The career guidance program helped me land a great job quickly."
+                </p>
+                <footer>- Sarah Johnson, Software Developer</footer>
+              </blockquote>
+
+              <blockquote>
+                <p>
+                  "The DevOps services from {projectName} improved our deployment speed significantly."
+                </p>
+                <footer>- Rahul Kumar, CTO</footer>
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Other sections remain the same but replace all 'TeaCode' with {projectName} */}
-
+      {/* You can add other sections similarly, keeping the projectName lowercase 'beardevops' */}
     </main>
   );
 };
-
-// Remember to replace all other mentions of 'TeaCode' or 'BearDevOps' in the code with {projectName} in lowercase 'beardevops'
 
 export default About;

@@ -97,6 +97,13 @@ function Home() {
         </div>
 
         <div className="relative container mx-auto px-6 text-center z-10">
+          {/* Beardevops logo added here */}
+          <img
+            src="/Beardevops.png"
+            alt="BearDevOps Logo"
+            className="mx-auto mb-8 w-40 h-auto"
+          />
+
           <div className="inline-block mb-8">
             <span className="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/20" style={{ color: '#4169E1' }}>
               <Star className="w-4 h-4 mr-2 text-yellow-400" />

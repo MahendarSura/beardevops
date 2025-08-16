@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   X,
@@ -10,8 +9,8 @@ import {
   CheckCircle2,
   Loader2,
 } from 'lucide-react';
-import razorpayLogo from '../assets/razorpay.svg';
-import payuLogo from '../assets/payu.svg';
+import razorpayLogo from '../assets/razorpay.png';  // renamed from razorpay.svg to razorpay.png
+import payuLogo from '../assets/payu.png';          // renamed from payu.svg to payu.png
 
 interface PaymentModalProps {
   isOpen: boolean;
@@ -220,7 +219,6 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                     required
                   />
                 </div>
-                // (Earlier code from above continues...)
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -309,6 +307,3 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
 };
 
 export default PaymentModal;
-
-                     
-

@@ -1,189 +1,53 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Code2,
-  Home,
-  Info,
-  Briefcase,
-  BookOpen,
-  MessageSquare,
-  Linkedin,
-  Twitter,
-  Instagram,
-  Github,
-  Mail,
-  Globe,
-  ArrowUp
-} from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+import Navbar from './components/Navbar';
+import Footer from './components/footer';  // changed to lowercase 'footer'
 
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import ServiceDetails from './pages/ServiceDetails';
+
+import Blogs from './pages/Blogs';
+import BlogPost from './pages/BlogPost';
+
+import Signup from './pages/auth/Signup';
+import VerifyOTP from './pages/auth/VerifyOTP';
+import SetPassword from './pages/auth/SetPassword';
+import Login from './pages/auth/Login';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import ResetPasswordOTP from './pages/auth/ResetPasswordOTP';
+import ResetPassword from './pages/auth/ResetPassword';
+
+function App() {
   return (
-    <footer className="relative bg-black border-t border-white/10">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-4 gap-12">
-          {/* Brand Section */}
-          <div>
-            <Link to="/" className="inline-flex items-center mb-6">
-              <Code2 className="h-8 w-8 text-pink-500" />
-              <span className="ml-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-                BeardevOps
-              </span>
-            </Link>
-            <p className="text-gray-400">
-              Helping engineers and learners build strong DevOps careers through practical learning, expert mentorship, and community-driven growth.
-            </p>
-          </div>
+    <Router>
+      <div className="min-h-screen w-full overflow-x-hidden bg-black text-white">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceId" element={<ServiceDetails />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:blogId" element={<BlogPost />} />
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-4">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-colors inline-flex items-center">
-                  <Home className="w-4 h-4 mr-2" />
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors inline-flex items-center">
-                  <Info className="w-4 h-4 mr-2" />
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors inline-flex items-center">
-                  <Briefcase className="w-4 h-4 mr-2" />
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/blogs" className="text-gray-400 hover:text-white transition-colors inline-flex items-center">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors inline-flex items-center">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Key Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Our Key Services</h4>
-            <ul className="space-y-4">
-              <li className="text-gray-400 hover:text-white transition-colors">
-                ✦ DevOps Mentorship & Training
-              </li>
-              <li className="text-gray-400 hover:text-white transition-colors">
-                ✦ Resume & LinkedIn Optimization
-              </li>
-              <li className="text-gray-400 hover:text-white transition-colors">
-                ✦ Hands-on CI/CD & Cloud Projects
-              </li>
-              <li className="text-gray-400 hover:text-white transition-colors">
-                ✦ 1:1 Career Guidance Sessions
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="mailto:beardevops@gmail.com"
-                  className="text-gray-400 hover:text-white transition-colors inline-flex items-center"
-                >
-                  <Mail className="w-4 h-4 mr-2" />
-                  beardevops@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://beardevops.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors inline-flex items-center"
-                >
-                  <Globe className="w-4 h-4 mr-2" />
-                  beardevops.vercel.app
-                </a>
-              </li>
-              <li className="text-gray-400 mt-4">
-                100% remote. Serving learners and professionals worldwide.
-              </li>
-            </ul>
-
-            {/* Social Media Links */}
-            <div className="mt-6">
-              <h5 className="text-sm font-semibold mb-4">Follow Us</h5>
-              <div className="flex space-x-4">
-                <a
-                  href="https://linkedin.com/in/beardevops"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-pink-500 transition-colors"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com/beardevops"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-pink-500 transition-colors"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://instagram.com/beardevops"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-pink-500 transition-colors"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://github.com/beardevops"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-pink-500 transition-colors"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+          {/* Auth Routes */}
+          <Route path="/auth/signup" element={<Signup />} />
+          <Route path="/auth/verify-otp" element={<VerifyOTP />} />
+          <Route path="/auth/set-password" element={<SetPassword />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/forgot-password" element={<ForgotPassword />} />
+          <Route path="/auth/reset-password-otp" element={<ResetPasswordOTP />} />
+          <Route path="/auth/reset-password" element={<ResetPassword />} />
+        </Routes>
+        <Footer />
       </div>
-
-      {/* Copyright */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-6 py-6 text-center text-gray-400">
-          © {new Date().getFullYear()} BeardevOps — All rights reserved.
-        </div>
-      </div>
-
-      {/* Scroll to Top */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 p-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg hover:shadow-pink-500/25 transition-all"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
-    </footer>
+    </Router>
   );
-};
+}
 
-export default Footer;
-
+export default App;

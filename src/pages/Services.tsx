@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, Star, CheckCircle2, HelpCircle, MessageCircle } from 'lucide-react';
@@ -75,6 +74,25 @@ const services = [
       "Weekly Webinars",
       "Peer Learning"
     ]
+  }
+];
+
+const faqs = [
+  {
+    question: "How long does it take to complete a service?",
+    answer: "Service completion times vary. DevOps services typically take 1-2 weeks, while profile optimization services are completed within 48-72 hours."
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "We accept all major payment methods including UPI, credit/debit cards, and net banking. All transactions are secure and encrypted."
+  },
+  {
+    question: "Do you offer refunds?",
+    answer: "Yes, we offer a 100% satisfaction guarantee. If you're not satisfied with our service, we'll provide a full refund within 7 days."
+  },
+  {
+    question: "Can I upgrade my service package?",
+    answer: "Absolutely! You can upgrade your service package at any time. Contact our support team for assistance with upgrades."
   }
 ];
 
@@ -193,24 +211,5 @@ const Services = () => {
     </div>
   );
 };
-
-const faqs = [
-  {
-    question: "How long does it take to complete a service?",
-    answer: "Service completion times vary. DevOps services typically take 1-2 weeks, while profile optimization services are completed within 48-72 hours."
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major payment methods including UPI, credit/debit cards, and net banking. All transactions are secure and encrypted."
-  },
-  {
-    question: "Do you offer refunds?",
-    answer: "Yes, we offer a 100% satisfaction guarantee. If you're not satisfied with our service, we'll provide a full refund within 7 days."
-  },
-  {
-    question: "Can I upgrade my service package?",
-    answer: "Absolutely! You can upgrade your service package at any time. Contact our support team for assistance with upgrades."
-  }
-];
 
 export default Services;

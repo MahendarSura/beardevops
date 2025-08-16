@@ -9,8 +9,10 @@ import {
   CheckCircle2,
   Loader2,
 } from 'lucide-react';
-import razorpayLogo from '../assets/razorpay.png';  // renamed from razorpay.svg to razorpay.png
-import payuLogo from '../assets/payu.png';          // renamed from payu.svg to payu.png
+
+// Import PNG logos instead of SVG
+import razorpayLogo from '../assets/razorpay.png';
+import payuLogo from '../assets/payu.png';
 
 interface PaymentModalProps {
   isOpen: boolean;

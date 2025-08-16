@@ -1,22 +1,23 @@
-
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, Star } from 'lucide-react';
 import PaymentModal from '../components/PaymentModal';
 import { servicesData } from '../data/services';
 
-const ServiceDetails: React.FC = () => {
-  const { serviceId } = useParams<{ serviceId: string }>();
+const ServiceDetails = () => {
+  const { serviceId } = useParams();
   const navigate = useNavigate();
-
   const [showPayment, setShowPayment] = useState(false);
-  const [selectedTier, setSelectedTier] = useState<{ name: string; price: string } | null>(null);
+  const [selectedTier, setSelectedTier] = useState<{
+    name: string;
+    price: string;
+  } | null>(null);
 
   const service = serviceId ? servicesData[serviceId as keyof typeof servicesData] : null;
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-6">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Service not found</h2>
           <Link
@@ -41,9 +42,9 @@ const ServiceDetails: React.FC = () => {
   };
 
   return (
-    <div className="pt-20 min-h-screen bg-gray-900 text-white">
-      {/* Header Section */}
-      <header className="relative py-20 overflow-hidden">
+    <div className="pt-20 min-h-screen">
+      {/* Header */}
+      <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900 to-pink-900 opacity-50" />
         <div className="relative container mx-auto px-6">
           <Link
@@ -55,18 +56,22 @@ const ServiceDetails: React.FC = () => {
           </Link>
           <div className="flex items-start justify-between">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">{service.title}</h1>
-              <p className="text-xl text-gray-300 max-w-2xl">{service.description}</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                {service.title}
+              </h1>
+              <p className="text-xl text-gray-300 max-w-2xl">
+                {service.description}
+              </p>
             </div>
             <div className="hidden md:block">
               <Star className="w-8 h-8 text-yellow-400" />
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Pricing Tiers */}
-      <main className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {service.tiers.map((tier, index) => (
             <div
@@ -97,7 +102,7 @@ const ServiceDetails: React.FC = () => {
             </div>
           ))}
         </div>
-      </main>
+      </div>
 
       {/* Payment Modal */}
       {showPayment && selectedTier && (
@@ -115,4 +120,3 @@ const ServiceDetails: React.FC = () => {
 };
 
 export default ServiceDetails;
-

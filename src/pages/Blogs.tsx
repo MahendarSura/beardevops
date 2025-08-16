@@ -24,53 +24,7 @@ const blogs = [
     image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=2070',
     featured: true
   },
-  {
-    id: 2,
-    title: 'Infrastructure as Code Best Practices',
-    excerpt: 'Discover the essential practices for managing your infrastructure using code effectively.',
-    author: 'Divya Satpute',
-    date: 'Feb 14, 2025',
-    category: 'Infrastructure as Code',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034',
-    featured: true
-  },
-  {
-    id: 3,
-    title: 'Kubernetes Monitoring Strategies',
-    excerpt: 'A comprehensive guide to monitoring your Kubernetes clusters for optimal performance.',
-    author: 'Ankit Raj',
-    date: 'March 13, 2024',
-    category: 'Kubernetes',
-    image: 'https://images.unsplash.com/photo-1667372393913-e5c9c643e1c9?q=80&w=2070',
-    featured: true
-  },
-  {
-    id: 4,
-    title: 'Docker Container Management',
-    excerpt: 'Master the art of managing Docker containers in a production environment.',
-    author: 'Azfar Alam',
-    date: 'Jan 10, 2025',
-    category: 'Docker',
-    image: 'https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=2071'
-  },
-  {
-    id: 5,
-    title: 'Automating Security in DevOps',
-    excerpt: 'Implement automated security measures in your DevOps pipeline for better protection.',
-    author: 'Divya Satpute',
-    date: 'March 11, 2025',
-    category: 'Security',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070'
-  },
-  {
-    id: 6,
-    title: 'Cloud Cost Optimization Guide',
-    excerpt: 'Learn effective strategies to optimize your cloud costs without compromising performance.',
-    author: 'Sarah Roushan',
-    date: 'March 12, 2024',
-    category: 'Cloud Computing',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072'
-  }
+  // add more blog objects as needed
 ];
 
 const Blogs = () => {
@@ -89,13 +43,13 @@ const Blogs = () => {
   const regularBlogs = filteredBlogs.filter(blog => !blog.featured);
 
   return (
-    <div className="min-h-screen pt-20 bg-black">
+    <div className="min-h-screen pt-20 bg-black text-white">
       {/* Header */}
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900 to-pink-900 opacity-50" />
         <div className="relative container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            DevOps Insights & Blogs
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            BeardDevOps Insights & Blogs
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mb-12">
             Explore expert articles, guides, and insights to enhance your DevOps knowledge.
@@ -109,20 +63,18 @@ const Blogs = () => {
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 transition-colors"
               />
             </div>
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={e => setSelectedCategory(e.target.value)}
               className="px-4 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-white focus:outline-none focus:border-pink-500 transition-colors"
             >
               <option value="">All Categories</option>
-              {categories.map((category) => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
+              {categories.map(category => (
+                <option key={category} value={category}>{category}</option>
               ))}
             </select>
           </div>
@@ -132,36 +84,34 @@ const Blogs = () => {
       {/* Featured Blogs */}
       <section className="py-12">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-8 text-white">Featured Articles</h2>
+          <h2 className="text-2xl font-bold mb-8">Featured Articles</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {featuredBlogs.map((blog) => (
+            {featuredBlogs.map(blog => (
               <div
                 key={blog.id}
-                className="group relative rounded-2xl overflow-hidden aspect-[16/9] hover:transform hover:scale-[1.02] transition-all"
+                className="group relative rounded-2xl overflow-hidden aspect-[16/9] hover:scale-[1.02] transition-transform"
               >
                 <img
                   src={blog.image}
                   alt={blog.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
-                <div className="absolute bottom-0 p-6">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-pink-500 text-white mb-3">
-                    {blog.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2">{blog.title}</h3>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <User2 className="w-4 h-4 mr-1" />
-                    {blog.author}
-                    <span className="mx-2">•</span>
-                    <Calendar className="w-4 h-4 mr-1" />
-                    {blog.date}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                  <div className="absolute bottom-0 p-6">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-pink-500 text-white mb-3">
+                      {blog.category}
+                    </span>
+                    <h3 className="text-xl font-bold text-white mb-2">{blog.title}</h3>
+                    <div className="flex items-center text-sm text-gray-300">
+                      <User2 className="w-4 h-4 mr-1" />
+                      {blog.author}
+                      <span className="mx-2">•</span>
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {blog.date}
+                    </div>
                   </div>
                 </div>
-                <Link
-                  to={`/blogs/${blog.id}`}
-                  className="absolute inset-0 w-full h-full focus:outline-none"
-                >
+                <Link to={`/blogs/${blog.id}`} className="absolute inset-0 w-full h-full focus:outline-none">
                   <span className="sr-only">Read more about {blog.title}</span>
                 </Link>
               </div>
@@ -170,11 +120,11 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Regular Blogs Grid */}
+      {/* Regular Blogs */}
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularBlogs.map((blog) => (
+            {regularBlogs.map(blog => (
               <div
                 key={blog.id}
                 className="group rounded-2xl bg-white/[0.08] border border-white/[0.08] hover:border-pink-500/50 transition-all overflow-hidden"
@@ -212,12 +162,12 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Categories Section */}
+      {/* Categories */}
       <section className="py-12 bg-white/[0.02]">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-8 text-white">Popular Categories</h2>
+          <h2 className="text-2xl font-bold mb-8">Popular Categories</h2>
           <div className="flex flex-wrap gap-4">
-            {categories.map((category) => (
+            {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -235,16 +185,16 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* Newsletter */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900 to-pink-900 opacity-20" />
         <div className="relative container mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4 text-white">Stay Updated on DevOps Trends</h2>
+            <h2 className="text-3xl font-bold mb-4">Stay Updated on DevOps Trends</h2>
             <p className="text-gray-300 mb-8">
               Subscribe to receive the latest articles, insights, and tips straight to your inbox.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
                 placeholder="Enter your email"

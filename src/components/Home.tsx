@@ -6,7 +6,6 @@ import {
   Brain,
   Rocket,
   Users,
-  BarChart3,
   MessageSquare,
   ChevronRight,
   Star,
@@ -85,7 +84,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full">
+    <div className="w-full" style={{ backgroundColor: '#FFDB58', color: '#4169E1' }}>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
@@ -99,29 +98,28 @@ function Home() {
 
         <div className="relative container mx-auto px-6 text-center z-10">
           <div className="inline-block mb-8">
-            <span className="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/20">
+            <span className="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/20 text-yellow-400">
               <Star className="w-4 h-4 mr-2 text-yellow-400" />
               Transforming Tech Careers
             </span>
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 animate-fade-in">
-            Elevate Your Tech Journey
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 animate-fade-in">
+            Evaluate Your Tech Journey
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in animation-delay-200">
-            Join the next generation of tech leaders with our cutting-edge DevOps
-            solutions and expert career guidance.
+          <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto animate-fade-in animation-delay-200">
+            Empowering DevOps careers, simplifying infrastructure for the next generation of tech leaders.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in animation-delay-400">
             <button
               onClick={() => navigate('/services')}
-              className="group px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 flex items-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 flex items-center gap-2"
             >
               Get Started
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => navigate('/services')}
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full font-semibold transition-all hover:scale-105 hover:bg-white/20 border border-white/20"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full font-semibold transition-all hover:scale-105 hover:bg-white/20 border border-white/20 text-white"
             >
               View Services
             </button>
@@ -141,7 +139,7 @@ function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Why Choose{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                Teacode
+                Beardevops
               </span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -250,7 +248,7 @@ function Home() {
               Connect with like-minded professionals, share experiences, and grow
               together in our thriving tech community.
             </p>
-            <button className="group px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center gap-2 mx-auto">
+            <button className="group px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center gap-2 mx-auto text-white">
               <MessageSquare className="w-5 h-5" />
               Join WhatsApp Community
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -78,8 +78,9 @@ const Blogs = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   const filteredBlogs = blogs.filter(blog => {
-    const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch =
+      blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = !selectedCategory || blog.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -93,7 +94,7 @@ const Blogs = () => {
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900 to-pink-900 opacity-50" />
         <div className="relative container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             DevOps Insights & Blogs
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mb-12">
@@ -119,7 +120,9 @@ const Blogs = () => {
             >
               <option value="">All Categories</option>
               {categories.map((category) => (
-                <option key={category} value={category}>{category}</option>
+                <option key={category} value={category}>
+                  {category}
+                </option>
               ))}
             </select>
           </div>
@@ -129,7 +132,7 @@ const Blogs = () => {
       {/* Featured Blogs */}
       <section className="py-12">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-8">Featured Articles</h2>
+          <h2 className="text-2xl font-bold mb-8 text-white">Featured Articles</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {featuredBlogs.map((blog) => (
               <div
@@ -141,19 +144,18 @@ const Blogs = () => {
                   alt={blog.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <div className="absolute bottom-0 p-6">
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-pink-500 text-white mb-3">
-                      {blog.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mb-2">{blog.title}</h3>
-                    <div className="flex items-center text-sm text-gray-300">
-                      <User2 className="w-4 h-4 mr-1" />
-                      {blog.author}
-                      <span className="mx-2">•</span>
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {blog.date}
-                    </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+                <div className="absolute bottom-0 p-6">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-pink-500 text-white mb-3">
+                    {blog.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-2">{blog.title}</h3>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <User2 className="w-4 h-4 mr-1" />
+                    {blog.author}
+                    <span className="mx-2">•</span>
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {blog.date}
                   </div>
                 </div>
                 <Link
@@ -213,7 +215,7 @@ const Blogs = () => {
       {/* Categories Section */}
       <section className="py-12 bg-white/[0.02]">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-8">Popular Categories</h2>
+          <h2 className="text-2xl font-bold mb-8 text-white">Popular Categories</h2>
           <div className="flex flex-wrap gap-4">
             {categories.map((category) => (
               <button
@@ -238,11 +240,11 @@ const Blogs = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900 to-pink-900 opacity-20" />
         <div className="relative container mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated on DevOps Trends</h2>
+            <h2 className="text-3xl font-bold mb-4 text-white">Stay Updated on DevOps Trends</h2>
             <p className="text-gray-300 mb-8">
               Subscribe to receive the latest articles, insights, and tips straight to your inbox.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4">
+            <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Enter your email"

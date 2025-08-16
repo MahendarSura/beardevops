@@ -97,7 +97,7 @@ function Home() {
         </div>
 
         <div className="relative container mx-auto px-6 text-center z-10">
-          {/* Beardevops logo added here */}
+          {/* Beardevops logo added here instead of text */}
           <img
             src="/Beardevops.png"
             alt="BearDevOps Logo"

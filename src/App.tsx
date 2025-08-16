@@ -1,28 +1,27 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-import Home from '../Home';
-import About from '../About';
-import Contact from '../Contact';
-import Services from '../Services';
-import ServiceDetails from '../ServiceDetails';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import ServiceDetails from './pages/ServiceDetails';
 
-import Blogs from '../Blogs';
-import BlogPost from '../BlogPost';
+import Blogs from './pages/Blogs';
+import BlogPost from './pages/BlogPost';
 
-import Signup from './Signup';
-import VerifyOTP from './VerifyOTP';
-import SetPassword from './SetPassword';
-import Login from './Login';
-import ForgotPassword from './ForgotPassword';
-import ResetPasswordOTP from './ResetPasswordOTP';
-import ResetPassword from './ResetPassword';
+import Signup from './pages/auth/Signup';
+import VerifyOTP from './pages/auth/VerifyOTP';
+import SetPassword from './pages/auth/SetPassword';
+import Login from './pages/auth/Login';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import ResetPasswordOTP from './pages/auth/ResetPasswordOTP';
+import ResetPassword from './pages/auth/ResetPassword';
 
-const App: React.FC = () => {
+function App() {
   return (
     <Router>
       <div className="min-h-screen w-full overflow-x-hidden bg-black text-white">
@@ -49,7 +48,6 @@ const App: React.FC = () => {
       </div>
     </Router>
   );
-};
+}
 
 export default App;
-

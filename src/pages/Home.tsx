@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -88,41 +87,44 @@ function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{ backgroundColor: '#FFDB58', color: '#4169E1' }}
+      >
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900 to-pink-900">
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-          </div>
+        <div className="absolute inset-0">
+          {/* No blobs needed or keep as is but with mustard bg */}
         </div>
 
         <div className="relative container mx-auto px-6 text-center z-10">
           <div className="inline-block mb-8">
-            <span className="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/20">
+            <span className="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-white/10 backdrop-blur-sm border border-white/20" style={{ color: '#4169E1' }}>
               <Star className="w-4 h-4 mr-2 text-yellow-400" />
               Transforming Tech Careers
             </span>
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 animate-fade-in">
-            Elevate Your Tech Journey
+          <h1 className="text-6xl md:text-7xl font-bold mb-6" style={{ color: '#4169E1' }}>
+            Evaluate Your Tech Journey
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in animation-delay-200">
-            Join the next generation of tech leaders with our cutting-edge DevOps
-            solutions and expert career guidance.
+          <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto" style={{ color: '#4169E1' }}>
+            Empowering DevOps careers, simplifying infrastructure for next generation of tech leaders.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in animation-delay-400">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button
               onClick={() => navigate('/services')}
-              className="group px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 flex items-center gap-2"
+              className="group px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 flex items-center gap-2"
+              style={{
+                background: 'linear-gradient(to right, #4169E1, #27408B)',
+                color: 'white',
+              }}
             >
               Get Started
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => navigate('/services')}
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full font-semibold transition-all hover:scale-105 hover:bg-white/20 border border-white/20"
+              className="px-8 py-4 backdrop-blur-sm rounded-full font-semibold transition-all hover:scale-105 border border-white/20"
+              style={{ color: '#4169E1', backgroundColor: 'rgba(255, 219, 88, 0.2)' }}
             >
               View Services
             </button>
@@ -142,7 +144,7 @@ function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Why Choose{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                Teacode
+                BearDevOps
               </span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -264,4 +266,3 @@ function Home() {
 }
 
 export default Home;
-
